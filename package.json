@@ -1,0 +1,17 @@
+{
+  "name": "typescript-virtual-keyboard",
+  "version": "1.0.0",
+  "description": "Virtual keyboard for people with reduced fine motor skills, built with TypeScript.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TypeScript",
+    "Virtual keyboard",
+    "Assistive technology"
+  ],
+  "author": "James Kernicky",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}

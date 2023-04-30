@@ -1,0 +1,8 @@
+# Dependencies
+node_modules
+
+# Production and other folders
+/dist/images
+
+# User files
+Notes.md

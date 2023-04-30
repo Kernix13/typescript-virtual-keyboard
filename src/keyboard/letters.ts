@@ -1,0 +1,34 @@
+import { cursorPosition } from "../utils.js";
+
+const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
+const [...keys] = document.getElementsByClassName("key");
+const capsKey = document.getElementById("caps") as HTMLButtonElement;
+
+// capitalize letter or not based on various criteria and output to textarea
+export function addLetters(): void {
+  keys.map(key => {
+    key.addEventListener("click", e => {
+      const letter = <HTMLButtonElement>e.target;
+      const letterkey = letter.value;
+      if (capsKey.classList.contains("caps-off")) {
+        const len = textBox.value.length;
+        const punc = textBox.value;
+        const x = cursorPosition(textBox);
+        if ([".", "?", "!", "\n"].includes(punc.charAt(len - 1)) || textBox.value.charAt(0) == "") {
+          textBox.value = textBox.value.slice(0, x) + " " + letterkey.toUpperCase() + textBox.value.slice(x);
+          textBox.focus();
+          textBox.selectionEnd = x + 2;
+        } else {
+          textBox.value = textBox.value.slice(0, x) + letterkey.toLowerCase() + textBox.value.slice(x);
+          textBox.focus();
+          textBox.selectionEnd = x + 1;
+        }
+      } else {
+        const x = cursorPosition(textBox);
+        textBox.value = textBox.value.slice(0, x) + letterkey.toUpperCase() + textBox.value.slice(x);
+        textBox.focus();
+        textBox.selectionEnd = x + 1;
+      }
+    });
+  });
+}
