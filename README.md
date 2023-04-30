@@ -1,6 +1,6 @@
 # Virtual Keyboard Assistant
 
-![Virtiual Keyboard](https://github.com/Kernix13/WriterAssist/blob/master/writer-assist-github-800.png)
+![Virtiual Keyboard](./writer-assist-github-800.png)
 
 A TypeScipt project to make a virtual keyboard to assist people with reduced fine motor skills. The hope is that composing letters and emails would be easier with this tool for an individual with an assitive mouse.
 
@@ -52,3 +52,15 @@ In total I am happy with the app. Here are the only issues I have right now (4-2
 ### Language and keyboard options.
 
 I would like to have a select list for the end user to be able to choose the language and keyboard layout that they want. I was not able to find an API for the various keyboard layouts and doing it manually for all languages and keyboards is more than I want to do at this time.
+
+## Contributions
+
+> Coming soon
+
+## Code of Conduct
+
+> Coming soon
+
+## License
+
+> Coming soon
