@@ -1,6 +1,6 @@
 # Virtual Keyboard Assistant
 
-![Virtiual Keyboard](writer-assist-github-800.png)
+![Virtiual Keyboard](./writer-assist-github-800.png)
 
 A TypeScipt project to make a virtual keyboard to assist people with reduced fine motor skills. The hope is that composing letters and emails would be easier with this tool for an individual with an assitive mouse.
 
