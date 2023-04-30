@@ -4,7 +4,7 @@
 
 A TypeScipt project to make a virtual keyboard to assist people with reduced fine motor skills. The hope is that composing letters and emails would be easier with this tool for an individual with an assitive mouse.
 
-The final textarea output would have to be copied with the copy button above the textarea, and then pasted from the clipboard into a document or email program.
+The final textarea output would have to be copied with the copy button above the textarea, and then pasted from the clipboard into a document or email program. View the [live demo on Netlify](https://cool-travesseiro-9b6101.netlify.app/).
 
 ## Setup
 
@@ -29,7 +29,7 @@ npx tsc -w
 npx tsc
 ```
 
-Double check the values in `tsconfig.json` such as `outDir` which is set to `./dist`.
+Double check the values in `tsconfig.json` such as `outDir` which is set to `./dist`. Normally, you would not push your `dist` folder but I had to for the deploy yo Netlify.
 
 ## To-Do items
 
