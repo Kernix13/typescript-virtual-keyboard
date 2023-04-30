@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+  <!-- change file names to writerassist.css and writerassist.js -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Writer Assist</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="primary-nav">
+      <div class="logo">
+        <span>Writing Assistant</span>
+      </div>
+      <ul role="list" class="nav-list">
+        <li class="nav-item"><a href="#notes" class="nav-link">Notes</a></li>
+        <li class="nav-item"><a href="https://courageous-cuchufli-816711.netlify.app/" target="_blank"
+            class="nav-link">Portfolio Home</a></li>
+      </ul>
+    </nav>
+    <h1 class="header-title">Mouse-only document &amp; email composition tool</h1>
+    <p>Assistive technology tool for people with reduced motor skills</p>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <button tabindex="-1">A</button>
+            <div class="submenu">
+              <ul id="lettera" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">B</button>
+            <div class="submenu">
+              <ul id="letterb" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">C</button>
+            <div class="submenu">
+              <ul id="letterc" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">D</button>
+            <div class="submenu">
+              <ul id="letterd" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">E</button>
+            <div class="submenu">
+              <ul id="lettere" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">F</button>
+            <div class="submenu">
+              <ul id="letterf" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">G</button>
+            <div class="submenu">
+              <ul id="letterg" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">H</button>
+            <div class="submenu">
+              <ul id="letterh" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button class="multi" tabindex="-1">IJK</button>
+            <div class="submenu">
+              <ul id="letteri" class="top-words"></ul>
+              <ul id="letterj" class="top-words"></ul>
+              <ul id="letterk" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">L</button>
+            <div class="submenu">
+              <ul id="letterl" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">M</button>
+            <div class="submenu">
+              <ul id="letterm" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">N</button>
+            <div class="submenu">
+              <ul id="lettern" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">O</button>
+            <div class="submenu">
+              <ul id="lettero" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">P</button>
+            <div class="submenu">
+              <ul id="letterp" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button class="multi" tabindex="-1">QR</button>
+            <div class="submenu">
+              <ul id="letterq" class="top-words"></ul>
+              <ul id="letterr" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">S</button>
+            <div class="submenu">
+              <ul id="letters" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">T</button>
+            <div class="submenu">
+              <ul id="lettert" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button class="multi" tabindex="-1">UV</button>
+            <div class="submenu">
+              <ul id="letteru" class="top-words"></ul>
+              <ul id="letterv" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button tabindex="-1">W</button>
+            <div class="submenu">
+              <ul id="letterw" class="top-words"></ul>
+            </div>
+          </li>
+          <li>
+            <button class="multi" tabindex="-1">XYZ</button>
+            <div class="submenu">
+              <ul id="letterx" class="top-words"></ul>
+              <ul id="lettery" class="top-words"></ul>
+              <ul id="letterz" class="top-words"></ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <button id="accordian" class="accordian" title="Click to open and close">Add Proper Nouns and
+        Phrases</button>
+      <div id="panel" class="panel inactive">
+        <section class="alphabet">
+          <ul id="special-words" class="box noun-words"></ul>
+        </section>
+      </div>
+    </div>
+
+    <section class="main-section">
+      <!-- Clear textfield Modal -->
+      <!-- Testing Netlify -->
+      <div class="modal-container" id="modal">
+        <div class="modal">
+          <button class="close-btn" id="close" aria-label="Close">
+            <i class="fa fa-times"></i>
+          </button>
+          <div class="modal-header">
+            <h3>Delete text</h3>
+          </div>
+          <div class="modal-content">
+            <p>Are you sure that you want to clear the text field?</p>
+            <form class="modal-form">
+              <button aria-label="Delete text field contents" id="clearText" type="button"
+                class="submit-btn yes-btn">Yes, delete the field.</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
+
+      <button id="open" class="clear-btn">Clear text box</button>
+      <button id="copy" class="copy-btn" value="copy-text" title="Does not work in IE">Copy text</button>
+      <textarea aria-label="Text area" name="textbox" id="text-box" class="text-box"
+        placeholder="Click any proper nouns or alphabet word buttons, or try the keyboard below to enter text..."></textarea>
+
+      <div class="two-col">
+        <div id="keyboard" class="keybrd-box">
+          <div class="keybrd-row top-items">
+            <button id="backtick" class="nonAlpha shiftItem" tabindex="-1" value="`">`</button>
+            <button id="one" class="nonAlpha shiftItem" tabindex="-1" value="1">1</button>
+            <button id="two" class="nonAlpha shiftItem" tabindex="-1" value="2">2</button>
+            <button id="three" class="nonAlpha shiftItem" tabindex="-1" value="3">3</button>
+            <button id="four" class="nonAlpha shiftItem" tabindex="-1" value="4">4</button>
+            <button id="five" class="nonAlpha shiftItem" tabindex="-1" value="5">5</button>
+            <button id="six" class="nonAlpha shiftItem" tabindex="-1" value="6">6</button>
+            <button id="seven" class="nonAlpha shiftItem" tabindex="-1" value="7">7</button>
+            <button id="eight" class="nonAlpha shiftItem" tabindex="-1" value="8">8</button>
+            <button id="nine" class="nonAlpha shiftItem" tabindex="-1" value="9">9</button>
+            <button id="zero" class="nonAlpha shiftItem" tabindex="-1" value="0">0</button>
+            <button id="dash" class="nonAlpha shiftItem" tabindex="-1" value="-">-</button>
+            <button id="equals" class="nonAlpha shiftItem" tabindex="-1" value="=">=</button>
+            <!-- <button id="backspace" class="nonprint backspace" tabindex="-1">&#x2190; BkSp</button> -->
+            <button id="backspace" class="nonprint backspace" tabindex="-1">&#x2190;</button>
+            <!-- <button id="delete" class="nonprint delete" tabindex="-1">&#9003; Del</button> -->
+            <button id="delete" class="nonprint delete" tabindex="-1">&#9003;</button>
+          </div>
+          <div class="keybrd-row top-items">
+            <button id="tab" class="nonprint tab" tabindex="-1">Tab</button>
+            <button class="key keyq" value="q" tabindex="-1">Q</button>
+            <button class="key keyw" value="w" tabindex="-1">W</button>
+            <button class="key keye" value="e" tabindex="-1">E</button>
+            <button class="key keyr" value="r" tabindex="-1">R</button>
+            <button class="key keyt" value="t" tabindex="-1">T</button>
+            <button class="key keyy" value="y" tabindex="-1">Y</button>
+            <button class="key keyu" value="u" tabindex="-1">U</button>
+            <button class="key keyi" value="i" tabindex="-1">I</button>
+            <button class="key keyo" value="o" tabindex="-1">O</button>
+            <button class="key keyp" value="p" tabindex="-1">P</button>
+            <button id="leftsq" class="nonAlpha rtsq shiftItem" value="[" tabindex="-1">[</button>
+            <button id="rtsq" class="nonAlpha leftsq shiftItem" value="]" tabindex="-1">]</button>
+            <button id="backslash" class="nonAlpha backslash shiftItem" value="\" tabindex="-1">\</button>
+          </div>
+          <div class="keybrd-row top-items">
+            <button id="caps" class="nonprint caps caps-off" tabindex="-1">Caps</button>
+            <button class="key keya" value="a" tabindex="-1">A</button>
+            <button class="key keys" value="s" tabindex="-1">S</button>
+            <button class="key keyd" value="d" tabindex="-1">D</button>
+            <button class="key keyf" value="f" tabindex="-1">F</button>
+            <button class="key keyg" value="g" tabindex="-1">G</button>
+            <button class="key keyh" value="h" tabindex="-1">H</button>
+            <button class="key keyj" value="j" tabindex="-1">J</button>
+            <button class="key keyk" value="k" tabindex="-1">K</button>
+            <button class="key keyl" value="l" tabindex="-1">L</button>
+            <button id="semicolon" class="nonAlpha shiftItem" value=";" tabindex="-1">;</button>
+            <button id="quotes" class="nonAlpha shiftItem" value="&apos;" tabindex="-1">&apos;</button>
+            <button id="enter" class="enter nonprint" tabindex="-1">&#9166; Enter</button>
+          </div>
+          <div class="keybrd-row top-items">
+            <button id="shiftl" class="nonprint shiftL shift-off" tabindex="-1">&#x21e7; Shift</button>
+            <button class="key keyz" value="z" tabindex="-1">Z</button>
+            <button class="key keyx" value="x" tabindex="-1">X</button>
+            <button class="key keyc" value="c" tabindex="-1">C</button>
+            <button class="key keyv" value="v" tabindex="-1">V</button>
+            <button class="key keyb" value="b" tabindex="-1">B</button>
+            <button class="key keyn" value="n" tabindex="-1">N</button>
+            <button class="key keym" value="m" tabindex="-1">M</button>
+            <button id="comma" class="nonAlpha shiftItem" value="," tabindex="-1">,</button>
+            <button id="period" class="nonAlpha shiftItem" value="." tabindex="-1">.</button>
+            <button id="forwardslash" class="nonAlpha shiftItem" value="/" tabindex="-1">/</button>
+            <button id="shiftr" class="nonprint shiftR shift-off" tabindex="-1">&#x21e7; Shift</button>
+          </div>
+          <div class="keybrd-row top-items">
+            <button id="spacebar" class="spacebar nonprint" tabindex="-1">Spacebar</button>
+          </div>
+        </div>
+        <!-- nav keys -->
+        <div class="keybrd-box2">
+          <div class="keybrd-row top-items">
+            <button id="homekey" class="home" value="home" tabindex="-1">Home</button>
+            <!-- <button id="uparrow" class="up-arrow secondary" value="&uarr;" tabindex="-1">&#8679;</button> -->
+            <!-- <button id="page-up" class="page-up secondary" value="page up" tabindex="-1">Pg &#8679;</button> -->
+          </div>
+          <div class="keybrd-row top-items">
+            <button id="leftarrow" class="larr" value="&larr;" tabindex="-1">&#8678;</button>
+            <span class="navBtn nothing" value=" " tabindex="-1">&nbsp; &nbsp;</span>
+            <button id="rightarrow" class="rarr" value="&rarr;" tabindex="-1">&#8680;</button>
+          </div>
+          <div class="keybrd-row top-items">
+            <button id="end" class="end" tabindex="-1">End</button>
+            <!-- <button id="downarrow" class="down-arrow secondary" value="&darr;" tabindex="-1">&#8681;</button> -->
+            <!-- <button id="page-down" class="page-down secondary" value="page down" tabindex="-1">Pg &#8681;</button> -->
+          </div>
+          <hr />
+          <div class="keybrd-row top-items">
+            <button class="numpad nonAlpha" tabindex="-1">7</button>
+            <button class="numpad nonAlpha" tabindex="-1">8</button>
+            <button class="numpad nonAlpha" tabindex="-1">9</button>
+            <button class="numpad nonAlpha" tabindex="-1">/</button>
+          </div>
+          <div class="keybrd-row top-items">
+            <button class="numpad nonAlpha" tabindex="-1">4</button>
+            <button class="numpad nonAlpha" tabindex="-1">5</button>
+            <button class="numpad nonAlpha" tabindex="-1">6</button>
+            <button class="numpad nonAlpha" tabindex="-1">*</button>
+          </div>
+          <div class="keybrd-row top-items">
+            <button class="numpad nonAlpha" tabindex="-1">1</button>
+            <button class="numpad nonAlpha" tabindex="-1">2</button>
+            <button class="numpad nonAlpha" tabindex="-1">3</button>
+            <button class="numpad nonAlpha" tabindex="-1">-</button>
+          </div>
+          <div class="keybrd-row top-items">
+            <button class="numpad nonAlpha zero2" tabindex="-1">0</button>
+            <button class="numpad nonAlpha" tabindex="-1">.</button>
+            <button class="numpad nonAlpha" tabindex="-1">+</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="notes-container">
+    <section id="notes" class="notes">
+      <div class="container border technical">
+        <h2>Notes for users of this app</h2>
+        <p>This app is for anyone with reduced fine motor controls, assuming they have better control of
+          positioning a mouse pointer than clicking individual keys on a keyboard. Diseases and conditions associated
+          with a loss of fine motor skills include infection, head trauma, multiple sclerosis, stroke, cerebral
+          palsy, Parkinson's, brain tumors, neuropathy, and spinal injuries.</p>
+        <p>Currently, I have hard-coded the most common phrases and words in English and the keyboard is set up with a
+          US format. Ideally, a friend or family member can create a file of the user's most used words and phrases,
+          although they would have
+          to overwrite the current data in <code>content.js</code>. I will eventually add a file upload option to
+          populate the alphabetical
+          words and common phrases sections.</p>
+
+        <h3>General Notes:</h3>
+        <ul>
+          <li>This app is for people who prefer to use a mouse to write because of their motor control difficulties.
+            This app is NOT for tablets or smartphones, though I tried to make it responsive in the event you wanted to
+            show someone the features or have a very small laptop monitor or a large tablet.</li>
+          <li>The text area has a clear button that will delete everything in the text field. Clicking that button opens
+            a popup asking to confirm the deletion. The popup confirmation is in case you clicked the clear button by
+            accident. The text area also has a copy button to copy the contents into your clipboard. You can then paste
+            the text into a document or email program.</li>
+          <li>All buttons have a change in color when you hover over them to know that you are "over the target", so to
+            speak. They also turn orange when you click them.</li>
+          <li>All words are designed to add a space before the word. Conversely, all characters on the keyboard do not
+            add a space, so if you will be typing out a word, use the Spacebar key on the virtual keyboard before typing
+            the word.</li>
+          <li>Clicking an alphabetical word or a phrase from the Common Phrases section automatically closes that menu.
+            After clicking a letter menu, you only have to hover over it to show it again. Click that letter again to
+            stop that behavior.</li>
+        </ul>
+        <hr />
+
+        <h3>Alphabetical words:</h3>
+        <ul>
+          <li>If you click the buttons for each letter of the alphabet, you'll see between 20 to 100+ words. I
+            added the most commonly used words that were 4 letters or greater, though for a few letters the cutoff is 3
+            letters.</li>
+          <li>Ideally, you want long words that are most often used by the user. The list shouldn’t be so long that you
+            lose time searching for a word that is not in there because you can’t remember a list of 100 words per
+            letter. Shorter is probably better.</li>
+          <li>Depending on the number of words you upload or the size of your monitor, you may not always see the text
+            entered in the text box because the mega menu will block part of the text field. Don’t worry, if you click a
+            word and can’t see the text box - it will be added.</li>
+        </ul>
+        <hr />
+
+        <h3>Proper Nouns and Phrases:</h3>
+        <p>Click the Proper Names button at the top to open that section. Click it a second time to close the section.
+          Click the buttons to add that word or phrase to the text area.</p>
+        <hr />
+
+        <h3>Virtual Keyboard and main text area:</h3>
+        <p>Use the keyboard for words that are not in the two sections above or for numbers and symbols. The keys have
+          hover and
+          click changes like the buttons above. There is full functionality for the non-character keys: Backspace,
+          Delete, Tab, Caps, Enter, Shift, and Spacebar.</p>
+        <ul>
+          <li>I omitted the Insert key as I find it an annoyance rather than a helpful key. I also moved the Delete key
+            to the main keyboard section.</li>
+          <li>Place your cursor anywhere in the text field to add any of the words or characters, or to use the keys
+            like Delete, Enter,
+            or the arrow keys. You can also insert words or phrases at the location of your cursor.</li>
+          <li>I have the Ctrl and Alt keys disabled as they are not needed for basic email or document writing. I also
+            hid the buttons for arrow up, page up, arrow down, and page down as I don’t think they are needed, though I
+            may add them later.</li>
+          <li>The Home, End, Right, and Left Arrow keys (<em>navigation keys</em>) are functional. However, the Home key
+            takes you to the beginning
+            of the text area, as opposed to the beginning of each line. The End key takes you to the end of the text
+            area instead of the end of each line.</li>
+          <li>I added the navigation keys and number pad to the left of the main keyboard section. The nav keys are
+            close
+            together for ease of use, and the number pad is to make entering multiple numbers easier (phone #'s,
+            addresses, etc.)</li>
+          <li>Both the Caps key and Shift keys will stay highlighted until you click them a second time. All words and
+            letters will be capitalized while the Caps key is on.</li>
+          <li>Hitting the Shift key toggles the 21 double-character keys that are on a standard US
+            keyboard.
+          </li>
+          <li>All words or letters that are the first in the text area, or are the first after you hit enter, or that
+            follow a period, exclamation, or question mark will automatically be capitalized. Use the Caps key for all
+            other capital letters.</li>
+          <li><strong>Tip</strong>: I highly recommend that you add the Grammarly Chrome
+            extension to your browser. It will put a red underline under spelling and grammar errors in the text box.
+            Just click the suggested replacement to make the change. Or click 'Dismiss' to remove the red highlighting.
+          </li>
+        </ul>
+        <hr />
+
+        <h3>Downloading the app to a desktop or laptop</h3>
+        <p>This app/tool will go away at some point. So download it or lose it! All you need to do is download the files
+          and open <code>index.html</code> to start using the app.</p>
+        <p>The keyboard and words are for an American English keyboard. I hope to have other language options in the
+          future. If you would like to download the files and start using the app, then follow these steps: Go to my
+          GitHub repository called <a href="https://github.com/Kernix13/WriterAssist" target="_blank">WriterAssist</a>
+          and click the green code button and select <strong>Download ZIP</strong>.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="primary-footer">
+    <div class="footer-container">
+      <h3>My important links:</h3>
+      <div class="footer-box">
+        <ul class="footer-nav">
+          <li><a href="https://courageous-cuchufli-816711.netlify.app/" target="_blank">Portfolio Home</a></li>
+          <li><a href="https://github.com/Kernix13/Kernix13/blob/main/resume.pdf" target="_blank">My Resume</a></li>
+          <li><a href="https://github.com/Kernix13" target="_blank">GitHub</a></li>
+          <li><a href="https://codepen.io/jim-kernicky/pens/public" target="_blank">Codepen</a></li>
+          <li><a href="https://www.freecodecamp.org/fccb4a9d0f6-135f-4a94-97f5-795068269ca7"
+              target="_blank">freeCodeCamp</a></li>
+        </ul>
+      </div>
+      <hr />
+      <p class="copyright">&copy; 2021 Kernix Web Design</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>

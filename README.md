@@ -17,6 +17,12 @@ npm init -y
 npm install typescript --save-dev
 # Initialize TypeScript (creates tsconfig.json):
 npx tsc --init
+# Create dist and src folders:
+mkdir dist src
+# create main .ts file:
+touch src/index.ts
+# Create HTML file for deploy in dist folder:
+touch dist/index.html
 # Build and watch your files:
 npx tsc -w
 # Or just build your files:
