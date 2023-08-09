@@ -13,11 +13,10 @@ import { openModalOnClick, closeModalOnClick, clearTextarea } from "./modal.js";
 
 const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
 
-/* ==== BEGIN ALPHA MANIPULATION & OUTPUT ===== */
-// add the alphabetical words to an array
+/* add the alphabetical words to an array */
 pageOutput(splitWords(wordsToSplit));
 
-/* SHOW SUBMENU ON CLICK - I don't like the HTML structure for this section */
+/* SHOW SUBMENU ON CLICK */
 const mainNavLi: NodeListOf<HTMLLIElement> = document.querySelectorAll(".main-nav li")!;
 mainNavLi.forEach(item => {
   item.addEventListener('click', (e) => {
@@ -31,7 +30,7 @@ mainNavLi.forEach(item => {
   })
 })
 
-/* ======= adding ALPHA words to TEXTAREA ==================== */
+/* ======= adding ALPHA words to TEXTAREA ======= */
 const [...textBtns] = document.getElementsByClassName("text-btn") as HTMLCollectionOf<HTMLLIElement>;
 
 textBtns.map((item): void => {
@@ -64,7 +63,6 @@ textBtns.map((item): void => {
 /* ==== END ALPHA ===== */
 
 /* ==== BEGIN PROPER NOUNS MANIPULATION & OUTPUT ===== */
-// properNounOutput places the Proper Nouns in the #special-words div
 properNounOutput(properNouns(properToSplit));
 
 /* ACCORDIAN FOR PROPER NOUNS, need animation or transition for closing */

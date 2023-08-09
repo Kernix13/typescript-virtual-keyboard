@@ -40,7 +40,7 @@ At this point I have hard-coded values for the alphabetical words and proper nou
 1. Their own list of alphabetical words and proper nouns for their language and/or region, or
 2. Have a user upload a large sample of their writing and populate the alphabetical and proper noun sections based on t he sample.
 
-For #2, there would have to be some array methods after spliting the text for. You would want to `reduce` the words to get the count each word appeared in the sample, `sort` descending by the word count for each word, and finally `filter` by character count and frequency. And that is just for the alphabetical option. The proper nouns section could be loaded into the DOM as they appear in the file.
+For #2, there would have to be some array methods after spliting the text for. You would want to `reduce` the words to get the count each word appears in the sample, `sort` descending by the word count for each word, and finally `filter` by a specific word count value. And that is just for the alphabetical option. The proper nouns section could be loaded into the DOM as they appear in the file.
 
 You would also need a checkbox to have the user specify whether they have the final alpha words, or need them reduced, sorted, and filtered. You will need some number input fields to increase or decrease the character count and/or the word frequency if the first run yielded too few or too many words.
 
@@ -69,4 +69,4 @@ I would like to have a select list for the end user to be able to choose the lan
 
 ## License
 
-> Coming soon
+> MIT license coming soon
