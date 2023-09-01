@@ -205,3 +205,5 @@ closeModal.addEventListener("click", closeModalOnClick);
 // Clear textarea
 const clearText = document.getElementById("clearText")! as HTMLButtonElement;
 clearText.addEventListener("click", clearTextarea);
+
+console.log("Testing root TS file")

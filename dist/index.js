@@ -175,4 +175,3 @@ closeModal.addEventListener("click", closeModalOnClick);
 const clearText = document.getElementById("clearText");
 clearText.addEventListener("click", clearTextarea);
 
-console.log("Testing root file")
