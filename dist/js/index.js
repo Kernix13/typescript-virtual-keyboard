@@ -11,10 +11,9 @@ import { removeCharAhead } from "./keyboard/remove.js";
 import { copyTextArea } from "./clipboard.js";
 import { openModalOnClick, closeModalOnClick, clearTextarea } from "./modal.js";
 const textBox = document.getElementById('text-box');
-/* ==== BEGIN ALPHA MANIPULATION & OUTPUT ===== */
-// add the alphabetical words to an array
+/* add the alphabetical words to an array */
 pageOutput(splitWords(wordsToSplit));
-/* SHOW SUBMENU ON CLICK - I don't like the HTML structure for this section */
+/* SHOW SUBMENU ON CLICK */
 const mainNavLi = document.querySelectorAll(".main-nav li");
 mainNavLi.forEach(item => {
     item.addEventListener('click', (e) => {
@@ -28,7 +27,7 @@ mainNavLi.forEach(item => {
         }
     });
 });
-/* ======= adding ALPHA words to TEXTAREA ==================== */
+/* ======= adding ALPHA words to TEXTAREA ======= */
 const [...textBtns] = document.getElementsByClassName("text-btn");
 textBtns.map((item) => {
     if (item) {
@@ -59,7 +58,6 @@ textBtns.map((item) => {
 });
 /* ==== END ALPHA ===== */
 /* ==== BEGIN PROPER NOUNS MANIPULATION & OUTPUT ===== */
-// properNounOutput places the Proper Nouns in the #special-words div
 properNounOutput(properNouns(properToSplit));
 /* ACCORDIAN FOR PROPER NOUNS, need animation or transition for closing */
 const accordian = document.getElementById("accordian");
