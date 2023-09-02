@@ -431,7 +431,6 @@ section,
 /* -------------notes and docs----------------------- */
 .notes {
   background-color: var(--white);
-  background-color: var(--desat-orange2);
   border: 1px solid #bbb;
 }
 
