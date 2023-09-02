@@ -28,20 +28,23 @@
 
 <body>
   <header class="header">
-    <nav class="primary-nav">
-      <div class="logo">
-        <span>Writing Assistant</span>
-      </div>
-      <ul role="list" class="nav-list">
-        <li class="nav-item"><a href="#notes" class="nav-link">Notes</a></li>
-        <li class="nav-item"><a href="https://courageous-cuchufli-816711.netlify.app/" target="_blank"
-            class="nav-link">Portfolio Home</a></li>
-      </ul>
-    </nav>
-    <h1 class="header-title">Mouse-only document &amp; email composition tool</h1>
-    <p>Assistive technology tool for people with reduced motor skills</p>
+    <div class="container">
+      <nav class="primary-nav">
+        <div class="logo">
+          <span>Writing Assistant</span>
+        </div>
+        <ul role="list" class="nav-list">
+          <li class="nav-item"><a href="/notes.html" class="nav-link">Notes</a></li>
+          <li class="nav-item"><a href="https://courageous-cuchufli-816711.netlify.app/" target="_blank"
+              class="nav-link">Portfolio Home</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
+  <div class="hero container">
+    <h1 class="header-title">Mouse-only document &amp; email composition tool</h1>
+    <p class="sub-headline">Assistive technology tool for people with reduced motor skills</p>
+  </div>
   <main>
     <div class="container">
       <nav class="main-nav">
@@ -327,108 +330,6 @@
     </section>
   </main>
 
-  <div class="notes-container">
-    <section id="notes" class="notes">
-      <div class="container border technical">
-        <h2>Notes for users of this app</h2>
-        <p>This app is for anyone with reduced fine motor controls, assuming they have better control of
-          positioning a mouse pointer than clicking individual keys on a keyboard. Diseases and conditions associated
-          with a loss of fine motor skills include infection, head trauma, multiple sclerosis, stroke, cerebral
-          palsy, Parkinson's, brain tumors, neuropathy, and spinal injuries.</p>
-        <p>Currently, I have hard-coded the most common phrases and words in English and the keyboard is set up with a
-          US format. Ideally, a friend or family member can create a file of the user's most used words and phrases,
-          although they would have
-          to overwrite the current data in <code>content.js</code>. I will eventually add a file upload option to
-          populate the alphabetical
-          words and common phrases sections.</p>
-
-        <h3>General Notes:</h3>
-        <ul>
-          <li>This app is for people who prefer to use a mouse to write because of their motor control difficulties.
-            This app is NOT for tablets or smartphones, though I tried to make it responsive in the event you wanted to
-            show someone the features or have a very small laptop monitor or a large tablet.</li>
-          <li>The text area has a clear button that will delete everything in the text field. Clicking that button opens
-            a popup asking to confirm the deletion. The popup confirmation is in case you clicked the clear button by
-            accident. The text area also has a copy button to copy the contents into your clipboard. You can then paste
-            the text into a document or email program.</li>
-          <li>All buttons have a change in color when you hover over them to know that you are "over the target", so to
-            speak. They also turn orange when you click them.</li>
-          <li>All words are designed to add a space before the word. Conversely, all characters on the keyboard do not
-            add a space, so if you will be typing out a word, use the Spacebar key on the virtual keyboard before typing
-            the word.</li>
-          <li>Clicking an alphabetical word or a phrase from the Common Phrases section automatically closes that menu.
-            After clicking a letter menu, you only have to hover over it to show it again. Click that letter again to
-            stop that behavior.</li>
-        </ul>
-        <hr />
-
-        <h3>Alphabetical words:</h3>
-        <ul>
-          <li>If you click the buttons for each letter of the alphabet, you'll see between 20 to 100+ words. I
-            added the most commonly used words that were 4 letters or greater, though for a few letters the cutoff is 3
-            letters.</li>
-          <li>Ideally, you want long words that are most often used by the user. The list shouldn’t be so long that you
-            lose time searching for a word that is not in there because you can’t remember a list of 100 words per
-            letter. Shorter is probably better.</li>
-          <li>Depending on the number of words you upload or the size of your monitor, you may not always see the text
-            entered in the text box because the mega menu will block part of the text field. Don’t worry, if you click a
-            word and can’t see the text box - it will be added.</li>
-        </ul>
-        <hr />
-
-        <h3>Proper Nouns and Phrases:</h3>
-        <p>Click the Proper Names button at the top to open that section. Click it a second time to close the section.
-          Click the buttons to add that word or phrase to the text area.</p>
-        <hr />
-
-        <h3>Virtual Keyboard and main text area:</h3>
-        <p>Use the keyboard for words that are not in the two sections above or for numbers and symbols. The keys have
-          hover and
-          click changes like the buttons above. There is full functionality for the non-character keys: Backspace,
-          Delete, Tab, Caps, Enter, Shift, and Spacebar.</p>
-        <ul>
-          <li>I omitted the Insert key as I find it an annoyance rather than a helpful key. I also moved the Delete key
-            to the main keyboard section.</li>
-          <li>Place your cursor anywhere in the text field to add any of the words or characters, or to use the keys
-            like Delete, Enter,
-            or the arrow keys. You can also insert words or phrases at the location of your cursor.</li>
-          <li>I have the Ctrl and Alt keys disabled as they are not needed for basic email or document writing. I also
-            hid the buttons for arrow up, page up, arrow down, and page down as I don’t think they are needed, though I
-            may add them later.</li>
-          <li>The Home, End, Right, and Left Arrow keys (<em>navigation keys</em>) are functional. However, the Home key
-            takes you to the beginning
-            of the text area, as opposed to the beginning of each line. The End key takes you to the end of the text
-            area instead of the end of each line.</li>
-          <li>I added the navigation keys and number pad to the left of the main keyboard section. The nav keys are
-            close
-            together for ease of use, and the number pad is to make entering multiple numbers easier (phone #'s,
-            addresses, etc.)</li>
-          <li>Both the Caps key and Shift keys will stay highlighted until you click them a second time. All words and
-            letters will be capitalized while the Caps key is on.</li>
-          <li>Hitting the Shift key toggles the 21 double-character keys that are on a standard US
-            keyboard.
-          </li>
-          <li>All words or letters that are the first in the text area, or are the first after you hit enter, or that
-            follow a period, exclamation, or question mark will automatically be capitalized. Use the Caps key for all
-            other capital letters.</li>
-          <li><strong>Tip</strong>: I highly recommend that you add the Grammarly Chrome
-            extension to your browser. It will put a red underline under spelling and grammar errors in the text box.
-            Just click the suggested replacement to make the change. Or click 'Dismiss' to remove the red highlighting.
-          </li>
-        </ul>
-        <hr />
-
-        <h3>Downloading the app to a desktop or laptop</h3>
-        <p>This app/tool will go away at some point. So download it or lose it! All you need to do is download the files
-          and open <code>index.html</code> to start using the app.</p>
-        <p>The keyboard and words are for an American English keyboard. I hope to have other language options in the
-          future. If you would like to download the files and start using the app, then follow these steps: Go to my
-          GitHub repository called <a href="https://github.com/Kernix13/WriterAssist" target="_blank">WriterAssist</a>
-          and click the green code button and select <strong>Download ZIP</strong>.</p>
-      </div>
-    </section>
-  </div>
-
   <footer class="primary-footer">
     <div class="footer-container">
       <h3>My important links:</h3>
@@ -447,7 +348,9 @@
     </div>
   </footer>
 
-  <script type="module" src="./js/index.js"></script>
+  <!-- <script type="module" src="./dist/js/content.js"></script> -->
+  <!-- <script type="module" src="./dist/js/main.js"></script> -->
+  <script type="module" src="./dist/js/index.js"></script>
 </body>
 
 </html>
