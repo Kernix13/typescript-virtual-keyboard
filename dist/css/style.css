@@ -11,6 +11,7 @@
   --black: rgb(0, 0, 0);
   --orange: rgb(255, 165, 0);
   --dark-gray: rgb(51, 51, 51);
+  --medium-gray: rgb(96, 96, 96);
   --light-gray: rgb(204, 204, 204);
   --light-gray2: #aaa;
   --desat-orange: rgba(238, 223, 140, 0.322);
@@ -36,9 +37,22 @@ body {
   padding: 0;
 }
 
+header {
+  margin-bottom: 2em;
+}
+
 header,
 footer {
   font-family: "Architects Daughter", cursive;
+  font-size: 120%;
+}
+
+main {
+  padding-bottom: 5em;
+}
+
+.hero {
+  font-family: "Roboto", sans-serif;
   font-size: 120%;
 }
 
@@ -65,7 +79,6 @@ ul.noun-words {
   list-style: none;
 }
 
-.header,
 .container,
 .notes-container,
 .footer-container {
@@ -78,27 +91,30 @@ ul.noun-words {
 }
 
 .header {
-  padding: 0.5em 0;
+  padding: 0.75em 0;
+  background-color: var(--desat-orange2);
+  // background-color: var(--dark-blue);
+  // color: #e0e7ef;
 }
 
-// had to give the h1 a class because user agent stylesheet removed my styles
 .header-title,
-.header p {
+.sub-headline {
   text-align: center;
 }
 
-.header-title {
+.header-title, .notes-title {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2.25rem;
+  line-height: 1.4;
+  font-weight: 400;
   margin: 0;
   padding: 0.5em 0 0;
   letter-spacing: 0.125em;
 }
 
-.header p {
-  margin: 0;
-  padding: 0.5em 0 1em;
-  letter-spacing: 0.125em;
+.sub-headline {
+  margin: 0 0 1em;
+  color: var(--medium-gray);
 }
 
 nav,
@@ -128,7 +144,9 @@ nav,
   transition: color 250ms ease-out;
 }
 
+
 .nav-link:hover,
+.nav-link span:hover,
 .nav-list.active {
   text-decoration: none;
   color: rgb(170, 144, 1);
@@ -142,7 +160,6 @@ nav,
 main,
 section,
 .box,
-.header,
 .keybrd-row,
 .alphabet,
 .footer-container,
@@ -414,6 +431,7 @@ section,
 /* -------------notes and docs----------------------- */
 .notes {
   background-color: var(--white);
+  background-color: var(--desat-orange2);
   border: 1px solid #bbb;
 }
 
