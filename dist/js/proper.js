@@ -1,4 +1,4 @@
-import { createListItems } from './utils.js';
+import { createListItems } from "./utils/createListItems.js";
 /* ==== BEGIN PROPER NOUNS MANIPULATION & OUTPUT ===== */
 // split proper nouns from content.js
 export function properNouns(str) {

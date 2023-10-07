@@ -1,4 +1,4 @@
-import { cursorPosition } from "../utils.js";
+import { cursorPosition } from "../utils/cursorPosition.js";
 const textBox = document.getElementById('text-box');
 const [...nonAlpha] = document.getElementsByClassName("nonAlpha");
 export function nonAlphaKeys() {

@@ -1,4 +1,4 @@
-import { createListItems } from './utils.js';
+import { createListItems } from "./utils/createListItems.js";
 
 /* ==== BEGIN ALPHA MANIPULATION & OUTPUT ===== */
 // split alphabetical words from content.js

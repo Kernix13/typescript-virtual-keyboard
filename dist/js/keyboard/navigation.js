@@ -1,7 +1,7 @@
 /* ===================================
 add nvaigation keys functionality
 ===================================== */
-import { cursorPosition } from "../utils.js";
+import { cursorPosition } from "../utils/cursorPosition.js";
 const textBox = document.getElementById('text-box');
 // HOME key
 export function focusAtStart() {

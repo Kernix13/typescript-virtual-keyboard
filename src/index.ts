@@ -1,7 +1,7 @@
 import { wordsToSplit, properToSplit } from './content.js';
 import { splitWords, pageOutput } from './alpha.js';
 import { properNouns, properNounOutput } from "./proper.js"
-import { cursorPosition } from "./utils.js";
+import { cursorPosition } from './utils/cursorPosition.js';
 import { addLetters } from "./keyboard/letters.js";
 import { createShiftItems, changeInner } from "./keyboard/shift.js";
 import { nonAlphaKeys } from "./keyboard/nonalpha.js";

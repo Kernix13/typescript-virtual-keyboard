@@ -1,4 +1,4 @@
-import { createListItems } from './utils.js';
+import { createListItems } from "./utils/createListItems.js";
 
 /* ==== BEGIN PROPER NOUNS MANIPULATION & OUTPUT ===== */
 
