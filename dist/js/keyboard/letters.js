@@ -1,4 +1,4 @@
-import { cursorPosition } from "../utils.js";
+import { cursorPosition } from "../utils/cursorPosition.js";
 const textBox = document.getElementById('text-box');
 const [...keys] = document.getElementsByClassName("key");
 const capsKey = document.getElementById("caps");
