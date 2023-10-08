@@ -1,5 +1,5 @@
 /* ===============================
-  MODAL & CLEAR functionality for textarea
+  MODAL functionality for textarea
 ================================== */
 const textBox = document.getElementById('text-box');
 const modal = document.getElementById("modal");
@@ -12,9 +12,3 @@ export function closeModalOnClick() {
     modal.classList.remove("show-modal");
 }
 window.addEventListener("click", e => (e.target === modal ? modal.classList.remove("show-modal") : false));
-// clear textarea
-export function clearTextarea() {
-    textBox.value = "";
-    textBox.focus();
-    modal.classList.remove("show-modal");
-}
