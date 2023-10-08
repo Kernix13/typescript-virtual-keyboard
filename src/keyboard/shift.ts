@@ -1,7 +1,7 @@
 const shiftArr: HTMLButtonElement[] = [];
 const shiftl = document.getElementById("shiftl")!;
 const shiftr = document.getElementById("shiftr")!;
-const shiftOffValues: string[] = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '=', '[', ']', '\\', ';', '\'', ',', '.', '/', ]
+const shiftOffValues: string[] = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '[', ']', '\\', ';', '\'', ',', '.', '/', ]
 const shiftOnValues: string[] = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '{', '}', '|', ':', '"', '<', '>', '?',];
 
 export function createShiftItems(arr: string[]) {

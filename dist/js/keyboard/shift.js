@@ -1,7 +1,7 @@
 const shiftArr = [];
 const shiftl = document.getElementById("shiftl");
 const shiftr = document.getElementById("shiftr");
-const shiftOffValues = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '=', '[', ']', '\\', ';', '\'', ',', '.', '/',];
+const shiftOffValues = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '[', ']', '\\', ';', '\'', ',', '.', '/',];
 const shiftOnValues = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '{', '}', '|', ':', '"', '<', '>', '?',];
 export function createShiftItems(arr) {
     arr.forEach((item) => {
