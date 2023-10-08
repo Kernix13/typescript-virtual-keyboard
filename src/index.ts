@@ -1,4 +1,4 @@
-import { wordsToSplit, properToSplit } from './content.js';
+import { wordsToSplit, properToSplit } from './modules/content.js';
 import { splitWords, pageOutput } from './alpha.js';
 import { properNouns, properNounOutput } from "./proper.js"
 import { cursorPosition } from './utils/cursorPosition.js';
@@ -8,8 +8,9 @@ import { nonAlphaKeys } from "./keyboard/nonalpha.js";
 import { focusAtStart, focusAtEnd, arrowLeft, arrowRight } from "./keyboard/navigation.js";
 import { removeCharBehind } from "./keyboard/remove.js";
 import { removeCharAhead } from "./keyboard/remove.js";
-import { copyTextArea } from "./clipboard.js";
-import { openModalOnClick, closeModalOnClick, clearTextarea } from "./modal.js";
+import { copyTextArea } from './modules/copyTextarea.js';
+import { openModalOnClick, closeModalOnClick } from "./modal.js";
+import { clearTextarea } from './modules/clearTextarea.js';
 
 const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
 
