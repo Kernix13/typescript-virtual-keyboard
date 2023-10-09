@@ -11,7 +11,7 @@ import { nonAlphaKeys } from "./keyboard/nonalpha.js";
 import { focusAtStart, focusAtEnd, arrowLeft, arrowRight } from "./keyboard/navigation.js";
 import { removeCharBehind } from "./keyboard/remove.js";
 import { removeCharAhead } from "./keyboard/remove.js";
-
+import tabKey from './keyboard/tabKey.js';
 
 import { copyTextArea } from './modules/copyTextarea.js';
 import { clearTextarea } from './modules/clearTextarea.js';
@@ -96,17 +96,9 @@ backspace.addEventListener("click", removeCharBehind);
 // DELETE KEY
 deleteKey.addEventListener("click", removeCharAhead);
 
-/* Leaving Tab, Spacebar, and Enter functionality here */
-// TAB (set to 5 spaces)
+// TAB KEY (set to 5 spaces)
 const tab = document.getElementById("tab")!;
-tab.addEventListener("click", function () {
-  if (tab.classList.contains("tab")) {
-    const x = cursorPosition(textBox);
-    textBox.value = textBox.value.slice(0, x) + `     ` + textBox.value.slice(x);
-    textBox.focus();
-    textBox.selectionEnd = x + 5;
-  }
-});
+tab.addEventListener('click', tabKey);
 
 // SPACEBAR KEY
 const spacebar = document.getElementById("spacebar")!;
