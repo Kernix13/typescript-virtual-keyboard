@@ -17,6 +17,7 @@ import { copyTextArea } from './modules/copyTextarea.js';
 import { clearTextarea } from './modules/clearTextarea.js';
 import { toggleMainNav } from './modules/toggleMainNav.js';
 import { addWordsToTextarea } from './modules/addWordsToTextarea.js';
+import { addPhrasestoTextarea } from './modules/addPhrasesToTextarea.js';
 
 const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
 
@@ -41,35 +42,24 @@ accordian.addEventListener("click", function() {
 });
 
 /* ====== adding PROPER words to TEXTAREA ====== */
-const [...special] = document.getElementsByClassName("special");
-
-special.map(item => {
-  item.addEventListener("click", (e: Event) => {
-    panel.classList.toggle("inactive");
-    const phrase = <HTMLButtonElement>e.target;
-    const userPhrase = phrase.value;
-    const x = cursorPosition(textBox);
-    textBox.value = textBox.value.slice(0, x) + " " + userPhrase + textBox.value.slice(x);
-    textBox.focus();
-    textBox.selectionEnd = x + userPhrase.length + 1;
-    return textBox.value;
-  });
-});
+addPhrasestoTextarea();
 
 /* ==================================
-  add KEYBOARD CHARACTERS to textarea - LETTERS, CAPS key, SHIFT key
+  CONSTANTS AND EVENT LISTENERS FROM HERE TO BOTTOM OF FILE
+
+  Add KEYBOARD CHARACTERS to textarea - LETTERS, CAPS key, SHIFT key
 =================================== */
 // CAPS key functionality and letters output In keyboard/letters.ts
 const capsKey = document.getElementById("caps") as HTMLButtonElement;
 addLetters();
 
-// add and remove class for highlighting the CAPS key
+// Add and remove class for highlighting the CAPS key
 capsKey.addEventListener("click", function() {
   capsKey.classList.toggle("caps-on");
   capsKey.classList.toggle("caps-off");
 });
 
-// add and remove class for highlighting the SHIFT keys
+// Add and remove class for highlighting the SHIFT keys
 const shiftl = document.getElementById("shiftl")!;
 const shiftr = document.getElementById("shiftr")!;
 
@@ -84,27 +74,26 @@ shiftr.addEventListener("click", function() {
 });
 
 // Grab all Shift Items and output them and the textContent for them
-// In keyboard/shift.ts
+// In keyboard/shift.ts - there has to be a better way to do this?!?
 const shiftItemIds: string[] = ['backtick', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'zero', 'dash', 'equals', 'leftsq', 'rtsq', 'backslash', 'semicolon', 'quotes', 'comma', 'period', 'forwardslash'];
 createShiftItems(shiftItemIds);
 
 shiftl.addEventListener("click", changeInner);
 shiftr.addEventListener("click", changeInner);
 
-// add NON-ALPHABETIC CHARACTERS (numbers & symbols) to textarea
-// I'm having a problem getting these keys
+// Add NON-ALPHABETIC CHARACTERS (numbers & symbols) to textarea
 nonAlphaKeys();
 
 /* ===========================================
-  add nonprint keys functionality for textarea
+  Add nonprint keys functionality for textarea
 ============================================ */
 const backspace = document.getElementById("backspace")!;
 const deleteKey = document.getElementById("delete")!;
 
-// BACKSPACE
+// BACKSPACE KEY
 backspace.addEventListener("click", removeCharBehind);
 
-// DELETE
+// DELETE KEY
 deleteKey.addEventListener("click", removeCharAhead);
 
 /* Leaving Tab, Spacebar, and Enter functionality here */
@@ -119,7 +108,7 @@ tab.addEventListener("click", function () {
   }
 });
 
-// SPACEBAR
+// SPACEBAR KEY
 const spacebar = document.getElementById("spacebar")!;
 spacebar.addEventListener("click", function () {
   if (spacebar.classList.contains("spacebar")) {
@@ -130,7 +119,7 @@ spacebar.addEventListener("click", function () {
   }
 });
 
-// ENTER
+// ENTER KEY
 const enter = document.getElementById("enter")!;
 enter.addEventListener("click", function () {
   const x = cursorPosition(textBox);
@@ -163,7 +152,7 @@ rightarrow.addEventListener("click", arrowRight);
 const copy = document.getElementById("copy")! as HTMLButtonElement;
 copy.addEventListener("click", copyTextArea);
 
-/* Open and Close modal for clearing the textarea */
+// Open and Close modal for clearing the textarea
 const openModal = document.getElementById("open")! as HTMLButtonElement;
 openModal.addEventListener("click", openModalOnClick);
 
@@ -173,5 +162,3 @@ closeModal.addEventListener("click", closeModalOnClick);
 // Clear textarea
 const clearText = document.getElementById("clearText")! as HTMLButtonElement;
 clearText.addEventListener("click", clearTextarea);
-
-console.log("Testing root TS file")
