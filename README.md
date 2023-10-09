@@ -29,7 +29,7 @@ npx tsc -w
 npx tsc
 ```
 
-Double check the values in `tsconfig.json` such as `outDir` which is set to `./dist`. Normally, you would not push your `dist` folder but I had to for the deploy to Netlify.
+Double check the values in `tsconfig.json` such as `outDir` which is set to `./dist`.
 
 ## To-Do items
 

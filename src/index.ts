@@ -148,9 +148,16 @@ leftarrow.addEventListener("click", arrowLeft);
 // RIGHT ARROW key
 rightarrow.addEventListener("click", arrowRight);
 
+/* ===================================
+add Copy & Clear Textarea and Open/Close Modal 
+===================================== */
 // Copy textarea to clipboard
 const copy = document.getElementById("copy")! as HTMLButtonElement;
 copy.addEventListener("click", copyTextArea);
+
+// Clear textarea
+const clearText = document.getElementById("clearText")! as HTMLButtonElement;
+clearText.addEventListener("click", clearTextarea);
 
 // Open and Close modal for clearing the textarea
 const openModal = document.getElementById("open")! as HTMLButtonElement;
@@ -158,7 +165,3 @@ openModal.addEventListener("click", openModalOnClick);
 
 const closeModal = document.getElementById("close")! as HTMLButtonElement;
 closeModal.addEventListener("click", closeModalOnClick);
-
-// Clear textarea
-const clearText = document.getElementById("clearText")! as HTMLButtonElement;
-clearText.addEventListener("click", clearTextarea);
