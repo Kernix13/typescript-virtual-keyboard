@@ -1,5 +1,6 @@
 import { wordsToSplit, properToSplit } from './modules/content.js';
 import { splitWords, pageOutput } from './alpha.js';
+import { openModalOnClick, closeModalOnClick } from "./modal.js";
 import { properNouns, properNounOutput } from "./proper.js";
 import { cursorPosition } from './utils/cursorPosition.js';
 import { addLetters } from "./keyboard/letters.js";
@@ -9,25 +10,14 @@ import { focusAtStart, focusAtEnd, arrowLeft, arrowRight } from "./keyboard/navi
 import { removeCharBehind } from "./keyboard/remove.js";
 import { removeCharAhead } from "./keyboard/remove.js";
 import { copyTextArea } from './modules/copyTextarea.js';
-import { openModalOnClick, closeModalOnClick } from "./modal.js";
 import { clearTextarea } from './modules/clearTextarea.js';
+import { toggleMainNav } from './modules/toggleMainNav.js';
 const textBox = document.getElementById('text-box');
 /* add the alphabetical words to an array */
 pageOutput(splitWords(wordsToSplit));
 /* SHOW SUBMENU ON CLICK */
 const mainNavLi = document.querySelectorAll(".main-nav li");
-mainNavLi.forEach(item => {
-    item.addEventListener('click', (e) => {
-        item.classList.toggle('active');
-        // if statement to fix error: Uncaught TypeError ...
-        if (item.children[1]) {
-            item.children[1].classList.toggle('show');
-        }
-        else {
-            item.classList.toggle('active');
-        }
-    });
-});
+toggleMainNav(mainNavLi);
 /* ======= adding ALPHA words to TEXTAREA ======= */
 const [...textBtns] = document.getElementsByClassName("text-btn");
 textBtns.map((item) => {
