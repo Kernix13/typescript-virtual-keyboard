@@ -13,6 +13,7 @@ import { removeCharBehind } from "./keyboard/remove.js";
 import { removeCharAhead } from "./keyboard/remove.js";
 import tabKey from './keyboard/tabKey.js';
 import spacebarKey from './keyboard/spacebarKey.js';
+import enterKey from './keyboard/enterKey.js';
 
 import { copyTextArea } from './modules/copyTextarea.js';
 import { clearTextarea } from './modules/clearTextarea.js';
@@ -107,12 +108,7 @@ spacebar.addEventListener('click', spacebarKey);
 
 // ENTER KEY
 const enter = document.getElementById("enter")!;
-enter.addEventListener("click", function () {
-  const x = cursorPosition(textBox);
-  textBox.value = textBox.value.slice(0, x) + "\n" + textBox.value.slice(x);
-  textBox.focus();
-  textBox.selectionEnd = x + 1;
-});
+enter.addEventListener('click', enterKey);
 
 /* ===================================
 add navigation keys functionality 
