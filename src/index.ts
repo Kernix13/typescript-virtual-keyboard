@@ -12,6 +12,7 @@ import { focusAtStart, focusAtEnd, arrowLeft, arrowRight } from "./keyboard/navi
 import { removeCharBehind } from "./keyboard/remove.js";
 import { removeCharAhead } from "./keyboard/remove.js";
 import tabKey from './keyboard/tabKey.js';
+import spacebarKey from './keyboard/spacebarKey.js';
 
 import { copyTextArea } from './modules/copyTextarea.js';
 import { clearTextarea } from './modules/clearTextarea.js';
@@ -102,14 +103,7 @@ tab.addEventListener('click', tabKey);
 
 // SPACEBAR KEY
 const spacebar = document.getElementById("spacebar")!;
-spacebar.addEventListener("click", function () {
-  if (spacebar.classList.contains("spacebar")) {
-    const x = cursorPosition(textBox);
-    textBox.value = textBox.value.slice(0, x) + " " + textBox.value.slice(x);
-    textBox.focus();
-    textBox.selectionEnd = x + 1;
-  }
-});
+spacebar.addEventListener('click', spacebarKey);
 
 // ENTER KEY
 const enter = document.getElementById("enter")!;
