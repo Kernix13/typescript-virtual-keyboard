@@ -1,15 +1,18 @@
-/* ===============================
-  MODAL functionality for textarea
-================================== */
 const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
 const modal = document.getElementById("modal")! as HTMLDivElement;
 
-// Open modal for confirmation and clear the text area
+/**
+ * Open modal for confirmation and clear the textarea on button click
+ *  
+ */
 export function openModalOnClick(): void {
   modal.classList.add("show-modal");
 }
 
-// Close modal
+/**
+ * Close modal on click
+ * 
+ */
 export function closeModalOnClick(): void {
   modal.classList.remove("show-modal");
 }
