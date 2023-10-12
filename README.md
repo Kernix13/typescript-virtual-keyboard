@@ -4,7 +4,9 @@
 
 A TypeScipt virtual keyboard project to assist people with reduced fine motor skills in composing letters and emails to friends, family, and work colleagues.
 
-The user can click the copy button above the textarea and paste the textarea content into a document or email program. View the [live demo on Netlify](https://cool-travesseiro-9b6101.netlify.app/).
+## Live Version
+
+This page is currently deployed on Netlify. View the [live app](https://cool-travesseiro-9b6101.netlify.app/). You can view more details on the project on [my portfolio site](https://courageous-cuchufli-816711.netlify.app/).
 
 ## Setup
 
@@ -31,7 +33,25 @@ npx tsc
 
 Double check the values in `tsconfig.json` such as `outDir` which is set to `./dist`.
 
-## To-Do items
+## Feedback and Bugs
+
+Open a GitHub issue if you have feedback on the app or find any bugs.
+
+## Contributing
+
+If you would like to contribute to the project, you may create a Pull Request containing your proposed changes and we will review it as soon as we are able! Please review our [contributing guidelines](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/CONTRIBUTING.md) first.
+
+## Code of Conduct
+
+Before interacting with our community, please read our [Code of Conduct](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/CODE_OF_CONDUCT.md).
+
+## License
+
+The content of this repository is bound by the [MIT license](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/LICENSE).
+
+Copyright © 2022 Jim Kernicky.
+
+<!-- ## To-Do items
 
 ### File Upload option
 
@@ -42,7 +62,7 @@ At this point I have hard-coded values for the alphabetical words and proper nou
 
 For #2, there would have to be some array methods after spliting the text and `reduce` the words to get the word count in the sample, `sort` descending by the word count for each word, and finally `filter` by a specific word count value. And that is just for the alphabetical option. The proper nouns section could be loaded into the DOM as they appear in the file.
 
-You would also need a checkbox to have the user specify whether they have the final alpha words, or need them reduced, sorted, and filtered. You will need some number input fields to increase or decrease the character count and/or the word frequency if the first run yielded too few or too many words.
+You would also need a checkbox to have the user specify whether they have the final alpha words, or need them reduced, sorted, and filtered. You will need some number input fields to increase or decrease the character count and/or the word frequency if the first run yielded too few or too many words. -->
 
 <!-- ### Errors and bugs
 
@@ -53,18 +73,6 @@ In total I am happy with the app. Here are the only issues I have right now (4-2
    1. Maybe check to see if cursor position is out of view with `getBoundingClientRect` then scroll to it.
    2. Or limit the page size by moving the _Notes_ section to its own page. -->
 
-### Language and keyboard options.
+<!-- ### Language and keyboard options.
 
-I would like to have a select list for the end user to be able to choose the language and keyboard layout that they want. I was not able to find an API for the various keyboard layouts and doing it manually for all languages and keyboards is more than I want to do at this time. I would love to have some contributors who are fluent in other languages
-
-## Contributions
-
-Check the file [CONTRIBUTING.md](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/CONTRIBUTING.md).
-
-## Code of Conduct
-
-Check the file [CODE_OF_CONDUCT.md](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/CODE_OF_CONDUCT.md).
-
-## License
-
-I added an [MIT License](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/LICENSE) for the project.
+I would like to have a select list for the end user to be able to choose the language and keyboard layout that they want. I was not able to find an API for the various keyboard layouts and doing it manually for all languages and keyboards is more than I want to do at this time. I would love to have some contributors who are fluent in other languages -->
