@@ -1,4 +1,11 @@
-/* Create the li and button for Alpha and Proper Nouns */
+
+/**
+ * Create the li and button elements for Alpha and Proper Nouns
+ * 
+ * @param btnText string
+ * @param btnClass string
+ * @returns HTMLLIElement
+ */
 export function createListItems(btnText: string, btnClass: string): HTMLLIElement {
     const li = document.createElement("li");
     li.classList.add("text-btn")!;
