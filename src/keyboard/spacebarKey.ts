@@ -3,6 +3,9 @@ import { cursorPosition } from "../utils/cursorPosition.js";
 const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
 const spacebar = document.getElementById("spacebar")!;
 
+/**
+ * SPACEBAR key: Add functionality to add a space at the cursor position
+ */
 export default function spacebarKey(): void {
   if (spacebar.classList.contains("spacebar")) {
     const x = cursorPosition(textBox);
