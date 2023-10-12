@@ -1,7 +1,11 @@
 import { cursorPosition } from "../utils/cursorPosition.js";
 const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
 
-// BACKSPACE
+// 
+/**
+ * BACKSPACE key: add functionality for the Backpace key to remove the
+ * character or space to the left (behind) the cursor. 
+ */
 export function removeCharBehind(): void {
   const x = cursorPosition(textBox);
   if (x != 0) {
@@ -13,7 +17,10 @@ export function removeCharBehind(): void {
   }
 }
 
-// DELETE
+/**
+ * DELETE key: add functionality for the Delete key to remove the
+ * character or space to the right (ahead) of the cursor. 
+ */
 export function removeCharAhead(): void {
   const x = cursorPosition(textBox);
   textBox.value = textBox.value.slice(0, x) + textBox.value.slice(x + 1);
