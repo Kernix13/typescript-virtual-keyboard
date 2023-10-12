@@ -1,5 +1,10 @@
-export function toggleMainNav(element) {
-    element.forEach(item => {
+/**
+ * Open the submenu when you click any alphabet letter
+ *
+ * @param elements main-nav li elements
+ */
+export function toggleMainNav(elements) {
+    elements.forEach(item => {
         item.addEventListener('click', (e) => {
             item.classList.toggle('active');
             // if statement to fix error: Uncaught TypeError ...

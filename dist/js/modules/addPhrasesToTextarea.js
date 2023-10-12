@@ -1,4 +1,7 @@
 import { cursorPosition } from "../utils/cursorPosition.js";
+/**
+ * Add the phrases in the Proper Nouns menu to the textarea on click.
+ */
 export function addPhrasestoTextarea() {
     const panel = document.getElementById("panel");
     const textBox = document.getElementById('text-box');

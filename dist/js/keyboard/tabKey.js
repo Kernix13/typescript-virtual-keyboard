@@ -1,6 +1,9 @@
 import { cursorPosition } from "../utils/cursorPosition.js";
 const textBox = document.getElementById('text-box');
 const tab = document.getElementById("tab");
+/**
+ * TAB key: Add functionality to add 5 spaces for the Tab key
+ */
 export default function tabKey() {
     if (tab.classList.contains("tab")) {
         const x = cursorPosition(textBox);

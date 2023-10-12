@@ -1,7 +1,10 @@
-/* ==============================================
-  COPY (Clipboard API) functionality for textarea
-================================================= */
 const textBox = document.getElementById('text-box');
+/**
+ * Use the Clipboard API to copy the textarea on click and
+ * highlight the text as a visual clue for the user.
+ *
+ * @returns
+ */
 export async function copyTextArea() {
     if (!navigator.clipboard) {
         alert("Copy to clipboard not supported");

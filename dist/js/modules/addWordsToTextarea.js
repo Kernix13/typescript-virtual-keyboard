@@ -1,4 +1,8 @@
 import { cursorPosition } from "../utils/cursorPosition.js";
+/**
+ * Add the words in the alphabet menu to the textarea on click.
+ * The words are lowercased but are capitalized if first in the textarea or if they follow end-of-sentence punctuation.
+ */
 export function addWordsToTextarea() {
     const textBox = document.getElementById('text-box');
     const [...textBtns] = document.getElementsByClassName("text-btn");
