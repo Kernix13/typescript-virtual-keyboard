@@ -1,16 +1,21 @@
 import { createListItems } from "./utils/createListItems.js";
 
-/* ==== BEGIN ALPHA MANIPULATION & OUTPUT ===== */
-// split alphabetical words from content.js
+/**
+ * Split the words in content.js to be used in the alphabetical menu
+ * 
+ * @param str Users string of words in content.js
+ * @returns 
+ */
 export function splitWords(str: string): string[] {
   const words: string[] = str.split(/[^a-zA-Z'-]+/gi);
   return words;
 }
 
-/* ====================================================
-pageOutput places the words in each alphabet letter div
-Need a Fx to toggle .hide to only show submenu when clicked
-==================================================== */
+/**
+ * Places the words in each alphabet letter div
+ * 
+ * @param arr Arroy of split words from splitWords()
+ */
 export function pageOutput(arr: string[]): void {
   arr.map((item) => {
     
@@ -27,5 +32,4 @@ export function pageOutput(arr: string[]): void {
     })
   });
 }
-// pageOutput(splitWords(wordsToSplit));
 
