@@ -1,16 +1,21 @@
 import { createListItems } from "./utils/createListItems.js";
 
-/* ==== BEGIN PROPER NOUNS MANIPULATION & OUTPUT ===== */
-
-// split proper nouns from content.js
+/**
+ * split proper nouns from content.js
+ * 
+ * @param str Users string of proper nouns in content.js
+ * @returns 
+ */
 export function properNouns(str: string): string[] {
   const nouns = str.split(/[^a-zA-Z\s.:?!'-]\s+/gi);
   return nouns;
 }
 
-/* ==================================
-properNounOutput places the Proper Nouns in the #special-words div
-=================================== */
+/**
+ * Places the Proper Nouns in the #special-words div
+ * 
+ * @param arr Array of split words from properNouns()
+ */
 export function properNounOutput(arr: string[]) {
   arr.map(item => {
     const specialNoun = document.getElementById("special-words")!;
