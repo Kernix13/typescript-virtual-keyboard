@@ -4,7 +4,11 @@ const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
 const [...keys] = document.getElementsByClassName("key");
 const capsKey = document.getElementById("caps") as HTMLButtonElement;
 
-// capitalize letter or not based on various criteria and output to textarea
+/**
+ * Capitalize initial letter and output to textarea if Caps key is off 
+ * AND the letter is the first letter in the textarea OR following end of
+ * sentence punctuation. Otherwise, capitalize all letters if Caps is on.
+ */
 export function addLetters(): void {
   keys.map(key => {
     key.addEventListener("click", e => {
