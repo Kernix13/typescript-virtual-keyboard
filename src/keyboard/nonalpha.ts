@@ -3,6 +3,10 @@ import { cursorPosition } from "../utils/cursorPosition.js";
 const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
 const [...nonAlpha] = document.getElementsByClassName("nonAlpha");
 
+/**
+ * Add all characters other than alphabet letters to the textarea. 
+ * Checks for the HTML entities for '&' and '<' and '>'.
+ */
 export function nonAlphaKeys() {
   nonAlpha.map(item => {
     item.addEventListener("click", (e: Event) => {
