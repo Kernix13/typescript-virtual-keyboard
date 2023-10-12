@@ -6,7 +6,7 @@ A TypeScipt virtual keyboard project to assist people with reduced fine motor sk
 
 ## Live Version
 
-This page is currently deployed on Netlify. View the [live app](https://cool-travesseiro-9b6101.netlify.app/). You can view more details on the project on [my portfolio site](https://courageous-cuchufli-816711.netlify.app/).
+This page is currently deployed on Netlify. Try the [live version](https://cool-travesseiro-9b6101.netlify.app/) or learn more about the app on [my portfolio site](https://courageous-cuchufli-816711.netlify.app/).
 
 ## Setup
 
@@ -35,15 +35,15 @@ Double check the values in `tsconfig.json` such as `outDir` which is set to `./d
 
 ## Feedback and Bugs
 
-Open a GitHub issue if you have feedback on the app or find any bugs.
+Open a GitHub issue if you found any bugs or have feeback about the app.
 
 ## Contributing
 
-If you would like to contribute to the project, you may create a Pull Request containing your proposed changes and we will review it as soon as we are able! Please review our [contributing guidelines](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/CONTRIBUTING.md) first.
+If you would like to contribute to the project, then create a Pull Request with your suggested changes. Also, please read our [contributing guidelines](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/CONTRIBUTING.md) before creating your PR.
 
 ## Code of Conduct
 
-Before interacting with our community, please read our [Code of Conduct](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/CODE_OF_CONDUCT.md).
+Please read our [Code of Conduct](https://github.com/Kernix13/typescript-virtual-keyboard/blob/main/CODE_OF_CONDUCT.md) before interacting with our community.
 
 ## License
 
