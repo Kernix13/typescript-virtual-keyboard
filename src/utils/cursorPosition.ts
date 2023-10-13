@@ -1,5 +1,5 @@
 /**
- * Get cursor position in textarea for many functions.
+ * Get cursor position in textarea for many of the keyboard functions.
  * 
  * @param element 
  * @returns number

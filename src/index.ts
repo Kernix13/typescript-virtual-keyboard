@@ -21,8 +21,6 @@ import { toggleMainNav } from './modules/toggleMainNav.js';
 import { addWordsToTextarea } from './modules/addWordsToTextarea.js';
 import { addPhrasestoTextarea } from './modules/addPhrasesToTextarea.js';
 
-const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
-
 /* add the alphabetical words to an array */
 pageOutput(splitWords(wordsToSplit));
 

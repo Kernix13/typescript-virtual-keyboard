@@ -1,6 +1,6 @@
 import { createListItems } from "./utils/createListItems.js";
 /**
- * split proper nouns from content.js
+ * Use RegEx to split proper nouns from content.js
  *
  * @param str Users string of proper nouns in content.js
  * @returns

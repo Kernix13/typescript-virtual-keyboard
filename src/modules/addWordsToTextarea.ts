@@ -2,7 +2,8 @@ import { cursorPosition } from "../utils/cursorPosition.js";
 
 /**
  * Add the words in the alphabet menu to the textarea on click.
- * The words are lowercased but are capitalized if first in the textarea or if they follow end-of-sentence punctuation.
+ * The words are lowercased but are capitalized if first in the 
+ * textarea or if they follow end-of-sentence punctuation.
  */
 export function addWordsToTextarea() {
 
@@ -12,7 +13,7 @@ export function addWordsToTextarea() {
   textBtns.map((item): void => {
   if (item) {
     item.addEventListener("click", (e: MouseEvent) => {
-      // Getting an error so I had to create 'w'
+      // Getting an error so I created the variable 'w'
       const w = <HTMLButtonElement>e.target;
       const word = w.textContent!;
       const len = textBox.value.length;

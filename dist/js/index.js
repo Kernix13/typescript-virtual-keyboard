@@ -16,7 +16,6 @@ import { clearTextarea } from './modules/clearTextarea.js';
 import { toggleMainNav } from './modules/toggleMainNav.js';
 import { addWordsToTextarea } from './modules/addWordsToTextarea.js';
 import { addPhrasestoTextarea } from './modules/addPhrasesToTextarea.js';
-const textBox = document.getElementById('text-box');
 /* add the alphabetical words to an array */
 pageOutput(splitWords(wordsToSplit));
 /* SHOW ALPHABET SUBMENU ON CLICK */

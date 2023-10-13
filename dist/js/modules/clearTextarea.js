@@ -1,8 +1,7 @@
 const textBox = document.getElementById('text-box');
 const modal = document.getElementById("modal");
 /**
- * Open modal on click as a confirmation to clear the text
- * in the textarea.
+ * Clear the textarea after clicking button on modal
  */
 export function clearTextarea() {
     textBox.value = "";

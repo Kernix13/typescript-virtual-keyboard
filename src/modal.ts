@@ -1,4 +1,3 @@
-const textBox = document.getElementById('text-box') as HTMLTextAreaElement;
 const modal = document.getElementById("modal")! as HTMLDivElement;
 
 /**
@@ -17,4 +16,7 @@ export function closeModalOnClick(): void {
   modal.classList.remove("show-modal");
 }
 
+/**
+ * Close modal on click outside of modal
+ */
 window.addEventListener("click", e => (e.target === modal ? modal.classList.remove("show-modal") : false));

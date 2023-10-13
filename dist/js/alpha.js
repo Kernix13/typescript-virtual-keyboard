@@ -1,9 +1,10 @@
 import { createListItems } from "./utils/createListItems.js";
 /**
- * Split the words in content.js to be used in the alphabetical menu
+ * Use Regex to split the words in content.js to be used in the
+ * alphabetical menu.
  *
  * @param str Users string of words in content.js
- * @returns
+ * @returns array of split words
  */
 export function splitWords(str) {
     const words = str.split(/[^a-zA-Z'-]+/gi);
@@ -19,7 +20,6 @@ export function pageOutput(arr) {
         const firstLetter = item.charAt(0);
         const id = `letter${firstLetter}`;
         const ul = document.getElementById(id);
-        // find matching UL in the DOM and append li elements:
         const domLetterUls = document.querySelectorAll(".top-words");
         domLetterUls.forEach(list => {
             if (id === list.id) {
