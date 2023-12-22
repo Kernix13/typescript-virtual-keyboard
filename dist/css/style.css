@@ -92,7 +92,7 @@ ul.noun-words {
 
 .header {
   padding: 0.75em 0;
-  background-color: var(--desat-orange2);
+  // background-color: var(--desat-orange2);
   // background-color: var(--dark-blue);
   // color: #e0e7ef;
 }
