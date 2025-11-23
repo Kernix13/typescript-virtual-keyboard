@@ -6,7 +6,7 @@ A TypeScipt virtual keyboard project to assist people with reduced fine motor sk
 
 ## Live Version
 
-This page is currently deployed on Netlify. Try the [live version](https://cool-travesseiro-9b6101.netlify.app/) or learn more about the app on [my portfolio site](https://courageous-cuchufli-816711.netlify.app/).
+This page is currently deployed on Netlify. Try the [live version](https://typescript-virtual-keyboard.netlify.app/) or learn more about the app on [my portfolio site](https://courageous-cuchufli-816711.netlify.app/).
 
 ## Setup
 
