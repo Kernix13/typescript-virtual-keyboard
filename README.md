@@ -76,3 +76,5 @@ In total I am happy with the app. Here are the only issues I have right now (4-2
 <!-- ### Language and keyboard options.
 
 I would like to have a select list for the end user to be able to choose the language and keyboard layout that they want. I was not able to find an API for the various keyboard layouts and doing it manually for all languages and keyboards is more than I want to do at this time. I would love to have some contributors who are fluent in other languages -->
+
+<!-- I just had to update Node to v22+ on Netlify because my portfolio link was not updating. I hoping that pushing this file with the new comment will trigger a redeploy -->
